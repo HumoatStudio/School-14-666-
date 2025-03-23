@@ -1,0 +1,101 @@
+/* Основной стиль */
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    transition: background-color 1s, color 1s;
+}
+
+/* Темная тема */
+body.dark-mode {
+    background-color: #111;
+    color: #ddd;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav ul li a img {
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+nav ul li a img:hover {
+    transform: scale(1.1);
+    filter: brightness(0.7) contrast(1.5);
+}
+
+main {
+    padding: 20px;
+}
+
+.hidden-text {
+    color: #111;
+    transition: color 0.5s;
+}
+
+.hidden-text:hover {
+    color: red;
+}
+
+/* Глитч-анимация текста */
+.glitch-text {
+    display: inline-block;
+    position: relative;
+    animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+.hidden-room {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px dashed red;
+}
+
+#secret-code {
+    padding: 5px;
+}
+
+#check-code {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.hidden-room .hidden-text {
+    display: none;
+}
+
+.schoolimg {
+    width: 350px;
+    height: 250px;
+}
+
+.weird-image {
+    width: 300px;
+    height: 300px;
+}
